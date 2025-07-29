@@ -1,0 +1,121 @@
+{
+  "films": [
+    {
+      "name": "Nausicaä do Vale do Vento",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Nausicaä of the Valley of the Wind",
+        "portuguese": "Nausicaä do Vale do Vento",
+        "japanese_romaji": "Kaze no Tani no Naushika"
+      }
+    },
+    {
+      "name": "O Castelo no Céu",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Castle in the Sky",
+        "portuguese": "O Castelo no Céu",
+        "japanese_romaji": "Tenkū no Shiro Rapyuta"
+      }
+    },
+    {
+      "name": "Túmulo dos Vagalumes",
+      "author": "Isao Takahata",
+      "titles": {
+        "english": "Grave of the Fireflies",
+        "portuguese": "Túmulo dos Vagalumes",
+        "japanese_romaji": "Hotaru no Haka"
+      }
+    },
+    {
+      "name": "Meu Amigo Totoro",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "My Neighbor Totoro",
+        "portuguese": "Meu Amigo Totoro",
+        "japanese_romaji": "Tonari no Totoro"
+      }
+    },
+    {
+      "name": "O Serviço de Entregas da Kiki",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Kiki's Delivery Service",
+        "portuguese": "O Serviço de Entregas da Kiki",
+        "japanese_romaji": "Majo no Takkyūbin"
+      }
+    },
+    {
+      "name": "Memórias de Ontem",
+      "author": "Isao Takahata",
+      "titles": {
+        "english": "Only Yesterday",
+        "portuguese": "Memórias de Ontem",
+        "japanese_romaji": "Omoide Poro Poro"
+      }
+    },
+    {
+      "name": "Porco Rosso: O Último Herói Romântico",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Porco Rosso",
+        "portuguese": "Porco Rosso: O Último Herói Romântico",
+        "japanese_romaji": "Kurenai no Buta"
+      }
+    },
+    {
+      "name": "Eu Posso Ouvir o Oceano",
+      "author": "Tomomi Mochizuki",
+      "titles": {
+        "english": "Ocean Waves",
+        "portuguese": "Eu Posso Ouvir o Oceano",
+        "japanese_romaji": "Umi ga Kikoeru"
+      }
+    },
+    {
+      "name": "PomPoko: A Grande Batalha dos Guaxinins",
+      "author": "Isao Takahata",
+      "titles": {
+        "english": "Pom Poko",
+        "portuguese": "PomPoko: A Grande Batalha dos Guaxinins",
+        "japanese_romaji": "Heisei Tanuki Gassen Pom Poko"
+      }
+    },
+    {
+      "name": "Sussurros do Coração",
+      "author": "Yoshifumi Kondō",
+      "titles": {
+        "english": "Whisper of the Heart",
+        "portuguese": "Sussurros do Coração",
+        "japanese_romaji": "Mimi o Sumaseba"
+      }
+    },
+    {
+      "name": "Princesa Mononoke",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Princess Mononoke",
+        "portuguese": "Princesa Mononoke",
+        "japanese_romaji": "Mononoke Hime"
+      }
+    },
+    {
+      "name": "Meus Vizinhos, Os Yamadas",
+      "author": "Isao Takahata",
+      "titles": {
+        "english": "My Neighbors the Yamadas",
+        "portuguese": "Meus Vizinhos, Os Yamadas",
+        "japanese_romaji": "Hōhokekyo Tonari no Yamada-kun"
+      }
+    },
+    {
+      "name": "A Viagem de Chihiro",
+      "author": "Hayao Miyazaki",
+      "titles": {
+        "english": "Spirited Away",
+        "portuguese": "A Viagem de Chihiro",
+        "japanese_romaji": "Sen to Chihiro no Kamikakushi"
+      }
+    }
+  ]
+}
