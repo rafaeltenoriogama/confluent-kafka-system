@@ -29,12 +29,12 @@ services:
       # - kafka:9092 → para containers
       # - localhost:9093 → para sua máquina
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
-
       # Mapeia os listeners para seus protocolos
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      # Change log retention hours (default 168 hours / 7 days)
+      #KAFKA_LOG_RETENTION_HOURS: 1
     depends_on:
       - zookeeper
     networks:
