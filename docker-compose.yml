@@ -20,25 +20,17 @@ services:
       - "9092:9092" # Porta interna (entre containers)
       - "9093:9093" # Porta externa (para PyCharm via localhost)
     environment:
-      KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-
-      # Escuta nas duas portas
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:9093
-      # Anuncia dois endpoints:
-      # - kafka:9092 → para containers
-      # - localhost:9093 → para sua máquina
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
-      # Mapeia os listeners para seus protocolos
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
-      # Change log retention hours (default 168 hours / 7 days)
-      #KAFKA_LOG_RETENTION_HOURS: 1
     depends_on:
       - zookeeper
     networks:
       - messaging-net
+    volumes:
+      - ./kafka-config/server.properties:/etc/kafka/server.properties
+      - ./kafka-logs/:/tmp/kafka-logs
 
   # 🧭 Redpanda Console (interface web)
   redpanda-console:

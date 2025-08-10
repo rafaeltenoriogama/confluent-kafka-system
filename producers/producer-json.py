@@ -27,7 +27,7 @@ def generate_message(i):
 
 
 # Enviar mensagens para três tópicos
-for i in range(600):
+for i in range(6000):
     msg = generate_message(i)
 
     # Enviar para o primeiro tópico
