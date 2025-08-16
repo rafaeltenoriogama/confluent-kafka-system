@@ -1,5 +1,4 @@
-version: "3.8"
-
+#version: "3.8"
 services:
   # 🐘 Zookeeper (necessário para Kafka sem KRaft)
   zookeeper:
@@ -24,6 +23,7 @@ services:
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:9093
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:/custom/log4j.properties"
     depends_on:
       - zookeeper
     networks:
@@ -31,6 +31,7 @@ services:
     volumes:
       - ./kafka-config/server.properties:/etc/kafka/server.properties
       - ./kafka-logs/:/tmp/kafka-logs
+      - ./kafka-config/log4j.custom.properties:/custom/log4j.properties
 
   # 🧭 Redpanda Console (interface web)
   redpanda-console:
