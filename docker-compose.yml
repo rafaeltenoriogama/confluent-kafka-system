@@ -19,11 +19,32 @@ services:
       - "9092:9092" # Porta interna (entre containers)
       - "9093:9093" # Porta externa (para PyCharm via localhost)
     environment:
+      # -- ZK -- #
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9093
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ZOOKEEPER_SASL_ENABLED: "false"
+      KAFKA_ZOOKEEPER_SET_ACL: "false"
+
+      # -- Listeners  SASL_SSL -- #
+      KAFKA_LISTENERS: SASL_SSL://0.0.0.0:9092,SASL_SSL_HOST://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: SASL_SSL://kafka:9092,SASL_SSL_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: SASL_SSL:SASL_SSL,SASL_SSL_HOST:SASL_SSL
+
+      # -- Security inter-broker and SASL/PLAIN -- #
+      KAFKA_SECURITY_INTER_BROKER_PROTOCOL: SASL_SSL
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
+
+      # -- SSL entrypoints -- Keystore/Truststore file location -- #
+      KAFKA_SSL_KEYSTORE_FILENAME: kafka.server.keystore.jks
+      KAFKA_SSL_TRUSTSTORE_FILENAME: kafka.server.truststore.jks
+      # -- Keystore/Truststore Credentials location -- #
+      KAFKA_SSL_KEY_CREDENTIALS: key_creds
+      KAFKA_SSL_KEYSTORE_CREDENTIALS: keystore_creds
+      KAFKA_SSL_TRUSTSTORE_CREDENTIALS: truststore_creds
+
+      # -- LOG4J & JAAS -- #
       KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:/custom/log4j.properties"
+      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/kafka_server_jaas.conf -Dzookeeper.sasl.client=false"
     depends_on:
       - zookeeper
     networks:
@@ -32,6 +53,12 @@ services:
       - ./kafka-config/server.properties:/etc/kafka/server.properties
       - ./kafka-logs/:/tmp/kafka-logs
       - ./kafka-config/log4j.custom.properties:/custom/log4j.properties
+      - ./kafka-config/kafka_server_jaas.conf:/etc/kafka/kafka_server_jaas.conf
+      - ./certs/kafka.server.keystore.jks:/etc/kafka/secrets/kafka.server.keystore.jks
+      - ./certs/kafka.server.truststore.jks:/etc/kafka/secrets/kafka.server.truststore.jks
+      - ./certs/key_creds:/etc/kafka/secrets/key_creds
+      - ./certs/keystore_creds:/etc/kafka/secrets/keystore_creds
+      - ./certs/truststore_creds:/etc/kafka/secrets/truststore_creds
 
   # 🧭 Redpanda Console (interface web)
   redpanda-console:

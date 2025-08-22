@@ -1,0 +1,44 @@
+===> User
+uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+===> Configuring ...
+Running in Zookeeper mode...
+SSL is enabled.
+SASL is enabled.
+===> Running preflight checks ... 
+===> Check if /var/lib/kafka/data is writable ...
+===> Check if Zookeeper is healthy ...
+[2025-08-17 17:28:39,454] INFO SASL is enabled. java.security.auth.login.config=/etc/kafka/kafka_server_jaas.conf (io.confluent.admin.utils.ClusterStatus)
+[2025-08-17 17:28:39,465] INFO Client environment:zookeeper.version=3.6.3--6401e4ad2087061bc6b9f80dec2d69f2e3c8660a, built on 04/08/2021 16:35 GMT (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:host.name=d057ed27e09c (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.version=11.0.20 (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.vendor=Azul Systems, Inc. (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.home=/usr/lib/jvm/java-11-zulu-openjdk-ca (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.class.path=/usr/share/java/cp-base-new/zookeeper-jute-3.6.3.jar:/usr/share/java/cp-base-new/paranamer-2.8.jar:/usr/share/java/cp-base-new/jackson-datatype-jdk8-2.14.2.jar:/usr/share/java/cp-base-new/metrics-core-2.2.0.jar:/usr/share/java/cp-base-new/jolokia-jvm-1.7.1.jar:/usr/share/java/cp-base-new/jackson-module-scala_2.13-2.14.2.jar:/usr/share/java/cp-base-new/re2j-1.6.jar:/usr/share/java/cp-base-new/kafka-raft-7.5.0-ccs.jar:/usr/share/java/cp-base-new/kafka-storage-api-7.5.0-ccs.jar:/usr/share/java/cp-base-new/minimal-json-0.9.5.jar:/usr/share/java/cp-base-new/jackson-core-2.14.2.jar:/usr/share/java/cp-base-new/scala-java8-compat_2.13-1.0.2.jar:/usr/share/java/cp-base-new/jackson-dataformat-yaml-2.14.2.jar:/usr/share/java/cp-base-new/jolokia-core-1.7.1.jar:/usr/share/java/cp-base-new/gson-2.9.0.jar:/usr/share/java/cp-base-new/jopt-simple-5.0.4.jar:/usr/share/java/cp-base-new/scala-logging_2.13-3.9.4.jar:/usr/share/java/cp-base-new/kafka-storage-7.5.0-ccs.jar:/usr/share/java/cp-base-new/jackson-databind-2.14.2.jar:/usr/share/java/cp-base-new/logredactor-metrics-1.0.12.jar:/usr/share/java/cp-base-new/kafka-metadata-7.5.0-ccs.jar:/usr/share/java/cp-base-new/commons-cli-1.4.jar:/usr/share/java/cp-base-new/kafka-tools-api-7.5.0-ccs.jar:/usr/share/java/cp-base-new/audience-annotations-0.5.0.jar:/usr/share/java/cp-base-new/kafka_2.13-7.5.0-ccs.jar:/usr/share/java/cp-base-new/scala-reflect-2.13.10.jar:/usr/share/java/cp-base-new/utility-belt-7.5.0.jar:/usr/share/java/cp-base-new/scala-library-2.13.10.jar:/usr/share/java/cp-base-new/jackson-dataformat-csv-2.14.2.jar:/usr/share/java/cp-base-new/logredactor-1.0.12.jar:/usr/share/java/cp-base-new/argparse4j-0.7.0.jar:/usr/share/java/cp-base-new/jmx_prometheus_javaagent-0.18.0.jar:/usr/share/java/cp-base-new/snappy-java-1.1.10.1.jar:/usr/share/java/cp-base-new/kafka-group-coordinator-7.5.0-ccs.jar:/usr/share/java/cp-base-new/jose4j-0.9.3.jar:/usr/share/java/cp-base-new/jackson-annotations-2.14.2.jar:/usr/share/java/cp-base-new/lz4-java-1.8.0.jar:/usr/share/java/cp-base-new/json-simple-1.1.1.jar:/usr/share/java/cp-base-new/slf4j-reload4j-1.7.36.jar:/usr/share/java/cp-base-new/kafka-server-common-7.5.0-ccs.jar:/usr/share/java/cp-base-new/disk-usage-agent-7.5.0.jar:/usr/share/java/cp-base-new/metrics-core-4.1.12.1.jar:/usr/share/java/cp-base-new/zookeeper-3.6.3.jar:/usr/share/java/cp-base-new/reload4j-1.2.19.jar:/usr/share/java/cp-base-new/snakeyaml-2.0.jar:/usr/share/java/cp-base-new/common-utils-7.5.0.jar:/usr/share/java/cp-base-new/kafka-clients-7.5.0-ccs.jar:/usr/share/java/cp-base-new/slf4j-api-1.7.36.jar:/usr/share/java/cp-base-new/zstd-jni-1.5.5-1.jar:/usr/share/java/cp-base-new/scala-collection-compat_2.13-2.10.0.jar (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.version=6.14.0-27-generic (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:user.name=appuser (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:user.home=/home/appuser (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:user.dir=/home/appuser (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.memory.free=237MB (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.memory.max=3968MB (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,465] INFO Client environment:os.memory.total=248MB (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,468] INFO Initiating client connection, connectString=zookeeper:2181 sessionTimeout=40000 watcher=io.confluent.admin.utils.ZookeeperConnectionWatcher@78a2da20 (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:28:39,472] INFO Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation (org.apache.zookeeper.common.X509Util)
+[2025-08-17 17:28:39,477] INFO jute.maxbuffer value is 1048575 Bytes (org.apache.zookeeper.ClientCnxnSocket)
+[2025-08-17 17:28:39,485] INFO zookeeper.request.timeout value is 0. feature enabled=false (org.apache.zookeeper.ClientCnxn)
+[2025-08-17 17:28:39,491] INFO Opening socket connection to server zookeeper/172.20.0.2:2181. (org.apache.zookeeper.ClientCnxn)
+[2025-08-17 17:28:39,497] INFO Socket connection established, initiating session, client: /172.20.0.3:33508, server: zookeeper/172.20.0.2:2181 (org.apache.zookeeper.ClientCnxn)
+[2025-08-17 17:28:39,518] INFO Session establishment complete on server zookeeper/172.20.0.2:2181, session id = 0x10000cbd1450000, negotiated timeout = 40000 (org.apache.zookeeper.ClientCnxn)
+[2025-08-17 17:29:19,486] ERROR Timed out waiting for connection to Zookeeper server [zookeeper:2181]. (io.confluent.admin.utils.ClusterStatus)
+[2025-08-17 17:29:19,493] WARN An exception was thrown while closing send thread for session 0x10000cbd1450000. (org.apache.zookeeper.ClientCnxn)
+EndOfStreamException: Unable to read additional data from server sessionid 0x10000cbd1450000, likely server has closed socket
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1290)
+[2025-08-17 17:29:19,596] INFO Session: 0x10000cbd1450000 closed (org.apache.zookeeper.ZooKeeper)
+[2025-08-17 17:29:19,596] INFO EventThread shut down for session: 0x10000cbd1450000 (org.apache.zookeeper.ClientCnxn)
+Using log4j config /etc/kafka/log4j.properties

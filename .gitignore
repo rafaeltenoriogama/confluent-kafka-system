@@ -1,2 +1,4 @@
 kafka-env/
 .idea/
+certs/*
+!/certs/generate-certificates.sh
